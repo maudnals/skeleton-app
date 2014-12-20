@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TabsApp</string>
+    <string name="title_section1">Sets</string>
+    <string name="title_section2">Stats</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <color name="transparent">#00000000</color>
+    <!-- to prevent @android:color/transparent from being BLACK (manufacturer override) -->
+
+</resources>
