@@ -29,19 +29,21 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090006;
+        public static final int action_settings=0x7f090007;
         public static final int footer=0x7f090001;
+        public static final int gridview=0x7f090005;
         public static final int pager=0x7f090000;
         public static final int playButton=0x7f090002;
         public static final int section_label=0x7f090003;
         public static final int section_label_sets=0x7f090004;
-        public static final int section_label_stats=0x7f090005;
+        public static final int section_label_stats=0x7f090006;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int fragment_main=0x7f030001;
         public static final int fragment_sets=0x7f030002;
         public static final int fragment_stats=0x7f030003;
+        public static final int grid=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -60,11 +62,14 @@ public final class R {
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
 
+
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
 
         
 
@@ -81,9 +86,20 @@ public final class R {
          */
         public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        /**       <item name="android:paddingStart">0dip</item> 
+     <item name="android:paddingEnd">0dip</item> 
+ <item name="android:displayOptions">showHome|homeAsUp|showTitle</item> 
+ <item name="android:icon">@android:color/transparent</item> 
+ <item name="android:icon">@color/transparent</item> 
+ <item name="android:titleTextStyle">@color/transparent</item> 
+         <item name="android:layout_width">0dip</item> 
+         <item name="android:layout_weight">1</item> 
+         <item name="android:paddingLeft">0dp</item> 
+         <item name="android:paddingRight">0dp</item> 
+        tiny ones 
+         */
         public static final int MyActionBar=0x7f070002;
     }
 }

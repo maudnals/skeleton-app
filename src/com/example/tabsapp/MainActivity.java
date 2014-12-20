@@ -14,11 +14,13 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
@@ -60,6 +62,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 					.setTabListener(this));
 			// + listener for when this tab is selected
 		}
+		
+		
+
+//	    gridview.setAdapter(new ImageAdapter(this));
 	}
 
 	@Override
