@@ -7,6 +7,7 @@ import android.app.ActionBar;
 //import android.app.Fragment;
 //import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 //import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.GridView;
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
@@ -62,9 +64,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 					.setTabListener(this));
 			// + listener for when this tab is selected
 		}
-		
-		
-
 //	    gridview.setAdapter(new ImageAdapter(this));
 	}
 
@@ -98,6 +97,12 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	@Override
 	public void onTabReselected(ActionBar.Tab tab,
 			FragmentTransaction fragmentTransaction) {
+	}
+	
+	public void launchAddSetActivity(View view){
+		Log.d("debug", "launch activity");
+		Intent myIntent = new Intent(this, AddSetActivity.class);
+		startActivity(myIntent);
 	}
 
 	public static class SectionsPagerAdapter extends FragmentPagerAdapter {

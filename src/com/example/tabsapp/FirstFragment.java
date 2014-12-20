@@ -20,8 +20,6 @@ public class FirstFragment extends Fragment {
 
 		GridView gridview = (GridView) view.findViewById(R.id.gridview);
 
-		// gridview.setAdapter(new ImageAdapter(getActivity()));
-
 		gridview.setAdapter(new GridAdapterImageText(getActivity(), web,
 				imageId));
 

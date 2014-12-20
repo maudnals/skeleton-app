@@ -6,12 +6,12 @@
     android:padding="5dp">
 
     <ImageButton
-        android:id="@+id/playButton"
+        android:id="@+id/addButton"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:onClick="sendMessage"
-        android:src="@drawable/ic_action_play" />
+        android:onClick="launchAddSetActivity"
+        android:src="@drawable/ic_action_new" />
 
 </LinearLayout>
