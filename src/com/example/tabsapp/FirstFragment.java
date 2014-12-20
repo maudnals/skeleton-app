@@ -15,13 +15,15 @@ public class FirstFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		
+
 		View view = inflater.inflate(R.layout.fragment_sets, container, false);
-		
-	    GridView gridview = (GridView) view.findViewById(R.id.gridview);
-	    gridview.setAdapter(new ImageAdapter(getActivity()));
-	    
-	    Log.d("io", "gridview " + gridview); 
+
+		GridView gridview = (GridView) view.findViewById(R.id.gridview);
+
+		// gridview.setAdapter(new ImageAdapter(getActivity()));
+
+		gridview.setAdapter(new GridAdapterImageText(getActivity(), web,
+				imageId));
 
 		// TextView tv = (TextView) v.findViewById(R.id.tvFragFirst);
 		// tv.setText(getArguments().getString("msg"));
@@ -39,4 +41,9 @@ public class FirstFragment extends Fragment {
 
 		return fragment;
 	}
+
+	String[] web = { "Google", "Github", "Instagram", "Facebook", "Flickr" };
+	int[] imageId = { R.drawable.ic_action_play, R.drawable.ic_action_play,
+			R.drawable.ic_action_play, R.drawable.ic_action_play,
+			R.drawable.ic_action_play };
 }
