@@ -4,6 +4,8 @@
     <string name="app_name">TabsApp</string>
     <string name="title_section1">Sets</string>
     <string name="title_section2">Stats</string>
+    <string name="content_sets">Here are the sets</string>
+    <string name="content_stats">Here are he stats</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 

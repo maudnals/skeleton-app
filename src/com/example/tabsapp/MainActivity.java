@@ -10,6 +10,7 @@ import android.app.FragmentTransaction;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -123,10 +124,18 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 
 		@Override
 		public Fragment getItem(int position) {
-			// getItem is called to instantiate the fragment for the given page.
-			// Return a PlaceholderFragment (defined as a static inner class
-			// below).
-			return PlaceholderFragment.newInstance(position + 1);
+
+			switch (position) {
+
+			case 0:
+				return FirstFragment.newInstance("FirstFragment, Instance 1");
+			case 1:
+				return SecondFragment.newInstance("SecondFragment, Instance 1");
+			default:
+				return FirstFragment.newInstance("ThirdFragment, Default");
+			}
+
+			//return PlaceholderFragment.newInstance(position + 1);
 		}
 
 		@Override
@@ -148,6 +157,59 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 		}
 	}
 
+	public static class FirstFragment extends Fragment {
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View v = inflater
+					.inflate(R.layout.fragment_sets, container, false);
+
+			// TextView tv = (TextView) v.findViewById(R.id.tvFragFirst);
+			// tv.setText(getArguments().getString("msg"));
+
+			return v;
+		}
+
+		public static FirstFragment newInstance(String text) {
+
+			FirstFragment f = new FirstFragment();
+			Bundle b = new Bundle();
+			b.putString("msg", text);
+
+			f.setArguments(b);
+
+			return f;
+		}
+	}
+
+	public static class SecondFragment extends Fragment {
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View v = inflater.inflate(R.layout.fragment_stats, container, false);
+
+//			TextView tv = (TextView) v.findViewById(R.id.tvFragSecond);
+//			tv.setText(getArguments().getString("msg"));
+
+			return v;
+		}
+
+		public static SecondFragment newInstance(String text) {
+
+			SecondFragment f = new SecondFragment();
+			Bundle b = new Bundle();
+			b.putString("msg", text);
+
+			f.setArguments(b);
+
+			return f;
+		}
+	}
+	
+	
+
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
@@ -163,6 +225,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 		 */
 		public static PlaceholderFragment newInstance(int sectionNumber) {
 			PlaceholderFragment fragment = new PlaceholderFragment();
+
 			Bundle args = new Bundle();
 			args.putInt(ARG_SECTION_NUMBER, sectionNumber);
 			fragment.setArguments(args);
@@ -175,8 +238,10 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main, container,
-					false);
+
+			View rootView = inflater.inflate(R.layout.fragment_stats,
+					container, false);
+
 			return rootView;
 		}
 	}
