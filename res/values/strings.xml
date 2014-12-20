@@ -7,7 +7,9 @@
     <string name="content_stats">Here are the stats : 100% cool</string>
     <string name="action_settings">Settings</string>
     <string name="add_set">Add a set of cards</string>
-    <string name="activity_add_set_label">Add a set of cards</string>
+    <string name="activity_add_set_label">Add a set</string>
+    <string name="save_set">Save</string>
+    <string name="title">Title</string>
 
     <color name="transparent">#00000000</color>
     <!-- to prevent @android:color/transparent from being BLACK (manufacturer override) -->
